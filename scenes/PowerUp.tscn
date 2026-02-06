@@ -1,0 +1,15 @@
+# Power-Up Items
+
+This file describes the various power-up items in the Mario Kart clone.
+
+## Power-Ups
+
+1. **Mushroom**: Gives the player a speed boost.
+2. **Star**: Makes the player invincible for a short period.
+3. **Green Shell**: Can be thrown to hit opponents.
+4. **Banana Peels**: Can be placed on the track to cause other players to slip.
+5. **Blue Shell**: Targets the player in the lead.
+
+## Usage
+
+Each power-up can be used strategically depending on the race situation. Players should consider their positioning and the items they currently hold to maximize their effectiveness.
