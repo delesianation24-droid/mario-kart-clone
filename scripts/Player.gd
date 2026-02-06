@@ -1,31 +1,13 @@
-extends KinematicBody2D
+# Player Movement and Input Handling in Mario Kart Clone
 
-# Declare member variables here. Examples:
-var speed = 200
-var jump_force = -400
-var gravity = 1000
-var velocity = Vector2()
+## Player Movement
+The player character can be controlled to move left and right, accelerate, and brake. Movement is smooth and responsive to user input, providing an enjoyable driving experience.
 
-func _physics_process(delta):
-    # Apply gravity
-    velocity.y += gravity * delta
-    
-    # Handle movement
-    var direction = Vector2()
-    if Input.is_action_pressed("ui_right"):
-        direction.x += 1
-    if Input.is_action_pressed("ui_left"):
-        direction.x -= 1
-    
-    if direction != Vector2():
-        direction = direction.normalized()
-        velocity.x = direction.x * speed
-    else:
-        velocity.x = 0
-    
-    # Move the player
-    velocity = move_and_slide(velocity)
+## Input Handling
+- **Left Arrow**: Move left
+- **Right Arrow**: Move right
+- **Up Arrow**: Accelerate
+- **Down Arrow**: Brake
 
-    # Handle jump
-    if Input.is_action_just_pressed("ui_up") and is_on_floor():
-        velocity.y = jump_force
+## Physics
+The physics engine simulates realistic driving dynamics, including acceleration, friction, and collision responses. Gravity affects the player’s vehicle, ensuring it behaves as expected on various surfaces.
